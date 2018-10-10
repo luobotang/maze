@@ -3,7 +3,10 @@ const path = require('path')
 const {generate_backtracker, generate_prim } = require('../lib/generator')
 const {renderToJSON, renderToHTML} = require('../lib/render')
 
-renderMazeAndOutput(generate_backtracker(), 'backtracker')
+renderMazeAndOutput(generate_backtracker(40, 40), 'backtracker')
+renderMazeAndOutput(generate_backtracker(40, 40, 4), 'backtracker_4')
+renderMazeAndOutput(generate_backtracker(40, 40, 10), 'backtracker_10')
+renderMazeAndOutput(generate_backtracker(40, 40, 50), 'backtracker_50')
 renderMazeAndOutput(generate_prim(), 'prim')
 
 function renderMazeAndOutput(maze, name) {
