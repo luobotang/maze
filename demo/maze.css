@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f0f0f0;
+}
+table.maze {
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+}
+table.maze td {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #333;
+}
+table.maze td.cell-up-open { border-top: none; }
+table.maze td.cell-right-open { border-right: none; }
+table.maze td.cell-down-open { border-bottom: none; }
+table.maze td.cell-left-open { border-left: none; }

@@ -1,0 +1,25 @@
+{
+  "name": "maze",
+  "version": "0.1.0",
+  "description": "maze generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "generate": "node demo/generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luobotang/maze.git"
+  },
+  "keywords": [
+    "maze"
+  ],
+  "author": "luobotang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luobotang/maze/issues"
+  },
+  "homepage": "https://github.com/luobotang/maze#readme"
+}
