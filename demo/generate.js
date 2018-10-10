@@ -1,10 +1,11 @@
 const fs = require('fs')
 const path = require('path')
-const {generate_backtracker, generate_prim } = require('../lib/generator')
+const {generate_backtracker, generate_prim, generate_tang} = require('../lib/generator')
 const {renderToJSON, renderToHTML} = require('../lib/render')
 
 renderMazeAndOutput(generate_backtracker(), 'backtracker')
 renderMazeAndOutput(generate_prim(), 'prim')
+renderMazeAndOutput(generate_tang(), 'tang')
 
 function renderMazeAndOutput(maze, name) {
   const html = (
