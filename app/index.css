@@ -1,0 +1,20 @@
+[v-cloak] {
+  display: none;
+}
+
+.maze-container {
+  margin: 20px;
+  min-height: 400px;
+}
+.maze-container .maze {
+  margin: 0;
+}
+.maze-container .maze--building {
+  background: #666;
+}
+.maze-container .cell-visited {
+  background: #fff;
+}
+.maze-container .cell-is-current {
+  background: red;
+}

@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "generate": "node demo/generate"
+    "generate": "node demo/generate.js",
+    "build": "node app/build.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/luobotang/maze/issues"
   },
-  "homepage": "https://github.com/luobotang/maze#readme"
+  "homepage": "https://github.com/luobotang/maze#readme",
+  "devDependencies": {
+    "rollup": "^0.66.6",
+    "rollup-plugin-commonjs": "^9.2.0"
+  }
 }

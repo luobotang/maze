@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>maze</title>
+  <link rel="stylesheet" href="../demo/maze.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="root" class="maze-container">
+    <div class="options">
+      <label>
+        width: 
+        <select v-model="options.width">
+          <option v-for="(opt, i) in options.width_options" :key="i" :value="opt">{{ opt }}</option>
+        </select>
+      </label>
+      <label>
+        height: 
+        <select v-model="options.height">
+          <option v-for="(opt, i) in options.height_options" :key="i" :value="opt">{{ opt }}</option>
+        </select>
+      </label>
+      <label>
+        steps: 
+        <select v-model="options.steps">
+          <option v-for="(opt, i) in options.steps_options" :key="i" :value="opt">{{ opt }}</option>
+        </select>
+      </label>
+      <button @click="build">build</button>
+    </div>
+    <table v-if="cells" class="maze" :class="{'maze--building': building}">
+      <tbody>
+        <tr v-for="(row, i) in cells" :key="i">
+          <td v-for="(cell, j) in row" :key="j" :class="cellClass(cell)"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="index.bundle.js"></script>
+</body>
+</html>
