@@ -113,13 +113,27 @@ var maze_app = (function () {
 	  return Math.floor(Math.random() * max)
 	}
 
+	function toJSON(cells) {
+	  return (
+	    '[' +
+	      cells.map((row) => '[' + row.map(([r, c, flag]) => '"' + flag.toString(16) + '"').join(',') + ']').join(',') +
+	    ']'
+	  )
+	}
+
+	function parseJSON(str) {
+	  return JSON.parse(str).map((row, rowIndex) => row.map((flag, colIndex) => [rowIndex, colIndex, parseInt(flag, 16)]))
+	}
+
 	var util = {
 	  setDirectionOpen,
 	  initMaze,
 	  hasUnvisitedCell,
 	  getOppositeDirection,
 	  getUnvisitedNeighbourCell,
-	  random
+	  random,
+	  toJSON,
+	  parseJSON
 	};
 
 	const {
